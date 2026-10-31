@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111b35">
+  <meta name="description" content="LEXORA منصة عربية لتعلم مفردات Oxford 3000 من A1 إلى B2 مع اختبارات ومراجعة ذكية ودعم العمل دون اتصال.">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>LEXORA | Oxford 3000</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./assets/icons/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-theme="light">
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-lockup">
+        <div class="brand-mark"><span>L</span><i></i></div>
+        <div><div class="brand-name">LEXORA</div><div class="brand-caption">OXFORD WORD PATH</div></div>
+      </div>
+      <div class="sidebar-label">مساحة التعلّم</div>
+      <nav class="main-nav" aria-label="التنقل الرئيسي">
+        <button class="nav-link active" data-section="home"><span class="nav-icon">⌂</span><span>الرئيسية</span></button>
+        <button class="nav-link" data-section="levels"><span class="nav-icon">◈</span><span>المستويات</span></button>
+        <button class="nav-link" data-section="learn"><span class="nav-icon">▤</span><span>تعلم الكلمات</span></button>
+        <button class="nav-link" data-section="quiz"><span class="nav-icon">✦</span><span>الاختبارات</span></button>
+        <button class="nav-link" data-section="errors"><span class="nav-icon">↻</span><span>مراجعة الأخطاء</span><span class="nav-counter" id="errorNavCount">0</span></button>
+        <button class="nav-link" data-section="favorites"><span class="nav-icon">♡</span><span>المفضلة</span></button>
+        <button class="nav-link" data-section="stats"><span class="nav-icon">▥</span><span>الإحصائيات</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="side-progress-card">
+          <div class="side-progress-top"><span>رحلتك حتى الآن</span><strong id="sideProgressPercent">0%</strong></div>
+          <div class="mini-progress"><span id="sideProgressBar"></span></div>
+          <small id="sideProgressText">ابدأ أول خطوة في A1</small>
+        </div>
+        <button class="nav-link" data-section="settings"><span class="nav-icon">⚙</span><span>الإعدادات والنسخ الاحتياطي</span></button>
+        <div class="sidebar-footnote">تعلم ثابت. تقدم حقيقي.</div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="topbar-title-wrap">
+          <button class="mobile-menu" id="mobileMenu" aria-label="فتح القائمة">☰</button>
+          <div><div class="eyebrow" id="pageEyebrow">مساحة التعلم الشخصية</div><div class="page-title" id="pageTitle">لوحة التقدم</div></div>
+        </div>
+        <div class="topbar-actions">
+          <div class="connection-pill" id="connectionStatus"><span></span><b>محلي</b></div>
+          <button class="icon-button" id="themeToggle" title="تغيير المظهر" aria-label="تغيير المظهر">☼</button>
+          <button class="install-button" id="installButton" hidden>＋ تثبيت التطبيق</button>
+          <div class="avatar-chip">LX</div>
+        </div>
+      </header>
+      <div class="mobile-nav-strip" id="mobileNavStrip"></div>
+      <section class="view-root" id="viewRoot" aria-live="polite">
+        <div class="loading-state"><div class="loader"></div><span>نجهّز مساحة تعلّمك…</span></div>
+      </section>
+      <footer class="app-footer"><span>LEXORA · Oxford 3000 American English</span><span>البيانات الأساسية محفوظة على هذا الجهاز</span></footer>
+    </main>
+  </div>
+
+  <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+  <div class="modal-root" id="modalRoot"></div>
+  <input type="file" id="backupFile" accept="application/json,.json" hidden>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

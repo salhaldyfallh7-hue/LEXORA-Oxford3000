@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LEXORA vocabulary dataset",
+  "type": "object",
+  "required": ["schemaVersion", "words"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "dataset": { "type": "string" },
+    "source": { "type": ["string", "null"] },
+    "words": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "headword", "forms", "levels", "meanings"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "headword": { "type": "string", "minLength": 1 },
+          "searchHeadword": { "type": "string" },
+          "forms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["partOfSpeech", "level"],
+              "properties": {
+                "partOfSpeech": { "type": "string" },
+                "level": { "enum": ["A1", "A2", "B1", "B2", null] }
+              },
+              "additionalProperties": true
+            }
+          },
+          "levels": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "enum": ["A1", "A2", "B1", "B2"] }
+          },
+          "meanings": { "type": "array", "items": { "type": "string" } },
+          "translationStatus": { "type": "string" },
+          "exampleEnglish": { "type": ["string", "null"] },
+          "exampleArabic": { "type": ["string", "null"] }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

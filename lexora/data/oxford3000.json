@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "dataset": "LEXORA authorized vocabulary dataset",
+  "source": null,
+  "note": "Add vocabulary data that you are authorized to use. This delivery intentionally does not reproduce the Oxford 3000 word compilation.",
+  "words": []
+}

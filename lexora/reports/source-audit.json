@@ -1,0 +1,35 @@
+{
+  "project": "LEXORA | Oxford 3000",
+  "source": "American_Oxford_3000.pdf",
+  "sourcePages": 11,
+  "sourceSha256": "aa53effa243e555f717cd8ea23607f1556ab5f5408c766b6e6a36a856c8cacc3",
+  "uniqueHeadwords": 3000,
+  "meaningEntries": 3003,
+  "entriesPerLevel": {
+    "A1": 901,
+    "A2": 870,
+    "B1": 808,
+    "B2": 731
+  },
+  "levelCountsNote": "Counts are per meaning/POS entry assigned to a level. An entry may appear in more than one level if Oxford assigns different CEFR levels to different POS forms.",
+  "entriesWithProvisionalArabicGloss": 784,
+  "entriesNeedingArabicTranslation": 2219,
+  "translationCoveragePercent": 26.11,
+  "legacyHtmlRecordsImported": 1268,
+  "sourceFormsWithoutExplicitLevel": [
+    {
+      "headword": "welcome",
+      "partOfSpeech": "n."
+    }
+  ],
+  "parseWarnings": 0,
+  "parseWarningSamples": [],
+  "c1Included": false,
+  "limitations": [
+    "Arabic glosses imported from the previous site are provisional and require review; unmatched entries are left blank rather than guessed.",
+    "Examples are not present in the supplied PDF or old HTML and must be added/verified by the learner or an editor.",
+    "A part-of-speech label without a CEFR label is preserved as level=null rather than inferred."
+  ],
+  "wordlistIncludedInDelivery": false,
+  "rightsNote": "The Oxford word compilation and the supplied PDF are not included in the project archive. This report contains extraction counts and source-structure observations only."
+}
